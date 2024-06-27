@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/master.css" />
+  </head>
+  <body>
+    <div class="form table w-75 mx-auto mt-5">
+      <label for="productName">productName</label>
+      <input type="text" id="productName" class="form-control mb-3" />
+      <label for="productPrice">productPrice</label>
+      <input class="form-control mb-3" type="number" id="productPrice" />
+      <label for="productCat">productCat</label>
+      <input class="form-control mb-3" type="text" id="productCat" />
+      <label for="productDesc">productDesc</label>
+      <textarea class="form-control mb-3" id="productDesc"></textarea>
+      <button class="btn btn-danger mb-3" id="addProduct">addProduct</button>
+      <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="search....."
+        id="search"
+        onkeyup="search(this.value)"
+      />
+    </div>
+
+    <table class="table w-75 m-auto">
+      <thead>
+        <th>Index</th>
+        <th>productName</th>
+        <th>productPrice</th>
+        <th>productCat</th>
+        <th>productDesc</th>
+        <th>UpDate</th>
+        <th>Delete</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <!-- //error why? -->
+    <!-- TypeError: Bootstrap's JavaScript requires jQuery. jQuery must be included before Bootstrap's JavaScript.
+    at Object.jQueryDetection (bootstrap.min.js:161:15)
+    at bootstrap.min.js:175:5
+    at bootstrap.min.js:11:7
+    at bootstrap.min.js:12:3 -->
+    <!-- <script src="js/bootstrap.min.js"></script>  -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
